@@ -1,0 +1,76 @@
+"dev": "nodemon backend/server.js", //used for development nodemon start it auromatically after changes are made
+"start":"node backend/server.js"//used for production doesnot start auromatically
+so basically we use async function when we want the result from some other sources and till we should not continue otherwise it will break the flow the original thought so we await in that we stop at that particular line until it has completed it task and then we continue to normal flow is that so m i understanding it right???
+
+
+ChatGPT said:
+✅ Yes — you’ve got the right idea! Let me polish your understanding a little more clearly:
+
+🔍 Your Understanding (Refined):
+We use async when we want to wait for some external result (like a database, API, or file operation), and we use await to pause at that point until the result is ready. This avoids continuing before the result arrives, which would otherwise break the flow.
+
+💯 That's exactly correct.
+
+✅ Refined Summary:
+async lets you write asynchronous code in a synchronous-looking way.
+
+await pauses execution at that line until the Promise resolves.
+
+It helps avoid:
+
+deeply nested callbacks
+
+complex .then() chains
+
+It keeps the code readable and linear, even when waiting on slow operations like APIs, file reads, or DB queries.
+
+🧪 Real-World Analogy:
+Imagine you order food at a restaurant:
+
+js
+Copy
+Edit
+// Normal JS
+getFood().then(eatFood);
+
+// async/await
+const food = await getFood();
+eat(food);
+Without await, you’d try to eat before the food even arrives 🍽️⏳.
+
+🛠 Example in code:
+js
+Copy
+Edit
+async function fetchUserData() {
+  const response = await fetch('/api/user'); // wait for API to respond
+  const user = await response.json();        // wait to parse JSON
+  console.log(user);                         // now we have real data
+}
+If you don’t use await, you’ll try to use the data before it’s even loaded — which leads to bugs.
+
+Let me know if you'd like a visual timeline or animated explanation — happy to walk you through it!
+
+
+
+
+
+
+
+
+
+
+
+Tools
+
+
+    "react-confetti": "^6.4.0",
+    "react-hot-toast": "^2.5.2",
+    "react-router-dom": "^7.7.1",
+    "recharts": "^3.1.0",
+    "stripe": "^18.4.0",
+    "lucide-react": "^0.536.0",
+    "@stripe/stripe-js": "^7.8.0",
+    "axios": "^1.11.0",
+    "framer-motion": "^12.23.12",
+    "zustand": "^5.0.7"
