@@ -15,6 +15,7 @@ dotenv.config()
 const app=express();
 const PORT=process.env.PORT;
 
+
 const __dirname = path.resolve();
 
 app.use(express.json({limit:"10mb"}));
@@ -26,6 +27,7 @@ app.use("/api/cart",cartRoutes)
 app.use("/api/coupons",couponRoutes)
 app.use("/api/payments",paymentRoutes)
 app.use("/api/analytics",analyticsRoutes)
+
 
 
 if (process.env.NODE_ENV === "production") {
