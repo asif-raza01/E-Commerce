@@ -1,4 +1,4 @@
-# 🛒 Full Stack E-Commerce Platform
+**# 🛒 Full Stack E-Commerce Platform**
 
 A production-oriented **full-stack e-commerce platform** built with the **MERN stack**, featuring secure authentication, role-based access control, Redis caching, Stripe payments, admin management, order workflows, and a responsive mobile-first interface.
 
@@ -6,40 +6,59 @@ The project focuses on building a complete e-commerce workflow from **product di
 
 ---
 
-## 🚀 Features
+**## 🚀 Features**
 
-### 👤 User Features
+**### 👤 User Features**
 
 * User registration and login
+
 * JWT-based authentication
+
 * Access & refresh token authentication
+
 * Secure protected routes
+
 * Product browsing and search
+
 * Product/category filtering
+
 * Shopping cart management
+
 * Order creation and tracking
+
 * Stripe payment integration
+
 * Responsive mobile-first UI
 
-### 🔐 Authentication & Authorization
+**### 🔐 Authentication & Authorization**
 
 * JWT-based authentication
+
 * Access token + refresh token flow
+
 * Role-Based Access Control (RBAC)
+
 * Protected customer routes
+
 * Protected admin routes
+
 * Secure authentication middleware
 
-### 🛍️ Product Management
+**### 🛍️ Product Management**
 
 * Product listing and details
+
 * Category-based organization
+
 * Product creation and updates
+
 * Product deletion
+
 * Inventory-related management
+
 * Admin product management
 
-### 💳 Payments
+**### 💳 Payments**
 
 Integrated **Stripe** for online payments.
 
@@ -61,15 +80,19 @@ Payment Confirmation
 Order Created
 ```
 
-### 📦 Order Management
+**### 📦 Order Management**
 
 * Order creation
+
 * Order history
+
 * Order details
+
 * Order status management
+
 * Admin order tracking
 
-### ⚡ Redis Caching
+**### ⚡ Redis Caching**
 
 Redis is used to cache frequently accessed product data.
 
@@ -80,8 +103,8 @@ Client Request
       ↓
    Redis Cache
     ↙      ↘
- HIT        MISS
-  ↓           ↓
+  HIT       MISS
+   ↓          ↓
 Return      MongoDB
 Data          ↓
               ↓
@@ -94,43 +117,7 @@ This reduces unnecessary database queries and improves API response performance.
 
 ---
 
-# 📸 Platform Preview
-
-### 🏠 Home / Product Interface
-
-![Home](./screenshots/home.png)
-
-### 🛍️ Product Listing
-
-![Products](./screenshots/products.png)
-
-### 📦 Product Details
-
-![Product Details](./screenshots/product-details.png)
-
-### 🛒 Shopping Cart
-
-![Cart](./screenshots/cart.png)
-
-### 💳 Checkout / Payment
-
-![Checkout](./screenshots/checkout.png)
-
-### 📋 Orders
-
-![Orders](./screenshots/orders.png)
-
-### 🔐 Authentication
-
-![Authentication](./screenshots/login.png)
-
-### 👨‍💼 Admin Dashboard
-
-![Admin Dashboard](./screenshots/admin-dashboard.png)
-
----
-
-# 🏗️ Architecture
+**# 🏗️ Architecture**
 
 The application follows a client-server architecture:
 
@@ -158,7 +145,7 @@ The application follows a client-server architecture:
 
 ---
 
-# 🔄 Application Flow
+**# 🔄 Application Flow**
 
 ```text
                     ┌──────────────┐
@@ -196,7 +183,7 @@ The application follows a client-server architecture:
 
 ---
 
-# 🔑 Authentication Flow
+**# 🔑 Authentication Flow**
 
 The application uses JWT-based authentication with access and refresh tokens.
 
@@ -227,11 +214,11 @@ User
 
 ---
 
-# ⚡ Redis Caching
+**# ⚡ Redis Caching**
 
 Frequently accessed product information is cached using Redis.
 
-### Cache Strategy
+**### Cache Strategy**
 
 ```text
 Request Product
@@ -249,14 +236,14 @@ Data       │
       Store in Redis
            │
            ▼
-        Return
+         Return
 ```
 
 The implementation achieved a measured **35% improvement in API response time** for the cached product access path.
 
 ---
 
-# 💳 Stripe Integration
+**# 💳 Stripe Integration**
 
 Stripe is integrated to handle online payments.
 
@@ -264,15 +251,15 @@ The checkout process follows:
 
 ```text
 Cart
-  ↓
+ ↓
 Checkout
-  ↓
+ ↓
 Create Payment
-  ↓
+ ↓
 Stripe Payment Gateway
-  ↓
+ ↓
 Payment Confirmation
-  ↓
+ ↓
 Create / Update Order
 ```
 
@@ -280,23 +267,29 @@ Sensitive payment processing is delegated to Stripe rather than storing card inf
 
 ---
 
-# 👨‍💼 Admin Dashboard
+**# 👨‍💼 Admin Dashboard**
 
 The platform includes an administrative interface for managing the e-commerce system.
 
-### Admin Capabilities
+**### Admin Capabilities**
 
 * Product management
+
 * Category management
+
 * Order management
+
 * Product updates
+
 * Product deletion
+
 * Sales-related analytics
+
 * Administrative workflows
 
 ---
 
-# 🗄️ Database Design
+**# 🗄️ Database Design**
 
 MongoDB is used as the primary application database.
 
@@ -334,7 +327,7 @@ Category
 
 ---
 
-# 🧰 Tech Stack
+**# 🧰 Tech Stack**
 
 | Layer          | Technologies                          |
 | -------------- | ------------------------------------- |
@@ -351,10 +344,11 @@ Category
 
 ---
 
-# 📁 Project Structure
+**# 📁 Project Structure**
 
 ```text
 E-Commerce/
+
 │
 ├── client/
 │   ├── src/
@@ -386,16 +380,16 @@ E-Commerce/
 
 ---
 
-# ⚙️ Local Setup
+**# ⚙️ Local Setup**
 
-## 1. Clone the repository
+**## 1. Clone the repository**
 
 ```bash
 git clone https://github.com/asif-raza01/Full-Stack-Ecommerce.git
 cd Full-Stack-Ecommerce
 ```
 
-## 2. Install dependencies
+**## 2. Install dependencies**
 
 Frontend:
 
@@ -411,7 +405,7 @@ cd ../server
 npm install
 ```
 
-## 3. Configure environment variables
+**## 3. Configure environment variables**
 
 Create a `.env` file inside the backend directory.
 
@@ -423,24 +417,26 @@ PORT=5000
 MONGO_URI=your_mongodb_connection_string
 
 JWT_SECRET=your_jwt_secret
+
 JWT_REFRESH_SECRET=your_refresh_token_secret
 
 REDIS_URL=your_redis_connection_string
 
 STRIPE_SECRET_KEY=your_stripe_secret_key
+
 STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
 ```
 
 **Never commit real API keys, database credentials, JWT secrets, or payment credentials to GitHub.**
 
-## 4. Start the backend
+**## 4. Start the backend**
 
 ```bash
 cd server
 npm run dev
 ```
 
-## 5. Start the frontend
+**## 5. Start the frontend**
 
 Open another terminal:
 
@@ -453,25 +449,33 @@ The application will then be available through the local development URL shown b
 
 ---
 
-# 🔐 Security Considerations
+**# 🔐 Security Considerations**
 
 The project implements several application-level security practices:
 
 * JWT-based authentication
+
 * Access and refresh token mechanism
+
 * Role-Based Access Control
+
 * Protected API routes
+
 * Authentication middleware
+
 * Environment variables for sensitive configuration
+
 * Stripe-hosted payment processing
+
 * Input validation
+
 * Secure API communication patterns
 
 ---
 
-# 📊 Engineering Highlights
+**# 📊 Engineering Highlights**
 
-### Authentication
+**### Authentication**
 
 Implemented a complete authentication flow with:
 
@@ -481,7 +485,7 @@ JWT
 └── Refresh Token
 ```
 
-### Authorization
+**### Authorization**
 
 ```text
 RBAC
@@ -489,21 +493,21 @@ RBAC
 └── Admin
 ```
 
-### Performance
+**### Performance**
 
 Redis caching was introduced for frequently accessed product data, with a measured **35% reduction in API response time** on the targeted cached access path.
 
-### Payments
+**### Payments**
 
 Stripe integration enables online checkout without storing raw card details in the application's database.
 
-### Frontend
+**### Frontend**
 
 The frontend uses reusable React components and a responsive, mobile-first interface.
 
 ---
 
-# 🧪 API Testing
+**# 🧪 API Testing**
 
 APIs can be tested using **Postman**.
 
@@ -536,45 +540,67 @@ Access Protected API
 
 ---
 
-# 🎯 Key Learning Outcomes
+**# 🎯 Key Learning Outcomes**
 
 This project provided hands-on experience with:
 
 * Full-stack MERN application development
+
 * REST API design
+
 * JWT authentication
+
 * Refresh token workflows
+
 * Role-Based Access Control
+
 * MongoDB data modeling
+
 * Redis caching
+
 * Payment gateway integration
+
 * React state management
+
 * Responsive UI development
+
 * API testing with Postman
+
 * Backend middleware and authorization
+
 * Client-server architecture
 
 ---
 
-# 🔮 Future Improvements
+**# 🔮 Future Improvements**
 
 Potential future improvements include:
 
 * Product recommendation system
+
 * Advanced search
+
 * Elasticsearch integration
+
 * Real-time order notifications
+
 * Inventory reservation
+
 * Automated email notifications
+
 * Dockerized deployment
+
 * CI/CD pipeline
+
 * Advanced analytics
+
 * Automated testing
+
 * Cloud deployment
 
 ---
 
-# 📌 Project Status
+**# 📌 Project Status**
 
 **Status:** Portfolio / Development Project
 
@@ -582,18 +608,16 @@ The application is designed as a complete full-stack e-commerce implementation a
 
 ---
 
-# 👨‍💻 Author
+**# 👨‍💻 Author**
 
 **Asif Raza**
 
 B.Tech Computer Engineering — Jamia Millia Islamia
 
 * GitHub: [asif-raza01](https://github.com/asif-raza01)
-* LinkedIn: Add your LinkedIn profile here
-* LeetCode: Add your LeetCode profile here
 
 ---
 
-## ⭐ If you found this project useful
+**## ⭐ If you found this project useful**
 
 Feel free to explore the repository, review the implementation, and use it as a reference for learning full-stack application development.
